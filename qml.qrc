@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Png/angle-left.png</file>
+        <file>Png/angle-small-down.png</file>
+        <file>Png/angle-small-left.png</file>
+        <file>Png/australia.png</file>
+        <file>Png/brazil.png</file>
+        <file>Png/canada.png</file>
+        <file>Png/china.png</file>
+        <file>Png/france (1).png</file>
+        <file>Png/france.png</file>
+        <file>Png/germany.png</file>
+        <file>Png/icons8-search-50.png</file>
+        <file>Png/india.png</file>
+        <file>Png/IndianFlag.png</file>
+        <file>Png/italy.png</file>
+        <file>Png/japan.png</file>
+        <file>Png/mexico.png</file>
+        <file>Png/netherlands.png</file>
+        <file>Png/norway.png</file>
+        <file>Png/russia.png</file>
+        <file>Png/singapore.png</file>
+        <file>Png/south-africa.png</file>
+        <file>Png/south-korea.png</file>
+        <file>Png/spain.png</file>
+        <file>Png/sweden.png</file>
+        <file>Png/united-kingdom.png</file>
+        <file>Png/united-states.png</file>
+        <file>SearchFieldComponent.qml</file>
+        <file>main.qml</file>
+        <file>CountryViewPage.qml</file>
+        <file>HeaderComponent.qml</file>
+        <file>CustomImage.qml</file>
+        <file>ListViewComponent.qml</file>
+        <file>CountryListDelegate.qml</file>
+        <file>CitiesListViewComponent.qml</file>
+        <file>BorderComponent.qml</file>
+        <file>SearchListView.qml</file>
+        <file>ListviewHeaderComponent.qml</file>
+        <file>Png/search.png</file>
+        <file>Png/left.png</file>
+        <file>Png/downArrow.png</file>
+    </qresource>
+</RCC>
