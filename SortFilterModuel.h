@@ -11,7 +11,6 @@ public:
     explicit SortFilterModuel(QSortFilterProxyModel *parent = nullptr);
 
     Q_INVOKABLE void setFilterString(const QString &filter);
-    Q_INVOKABLE void setSortOrder(Qt::SortOrder order);
     Q_INVOKABLE void setSortType(int index);
 };
 

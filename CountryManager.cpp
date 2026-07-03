@@ -7,38 +7,38 @@ CountryManager *CountryManager::m_countryManager = nullptr;
 
 CountryManager::CountryManager(QObject *parent) : QObject{parent} {
   // countryInitializer();
-  addToSearchList();
   if(!m_fileReder)
       m_fileReder = new JsonFileManager;
 
   // m_fileReder->writeJson("CountryData.json", this);
   m_fileReder->readJson("CountryData.json",this);
+  // addToSearchList();
 }
 
 QMap<int, Country *> CountryManager::getCountryList() const {
   return m_countryList;
 }
 
-const QMap<QString, QString> &CountryManager::getCountryCityListMap() const {
-  return M_countryCityList;
-}
+// const QMap<QString, QString> &CountryManager::getCountryCityListMap() const {
+//   return M_countryCityList;
+// }
 
-void CountryManager::addToSearchList() {
+// void CountryManager::addToSearchList() {
 
-  for (const Country *country : m_countryList) {
-    M_countryCityList[country->getCountry()] = country->getPngPath();
-    for (City *city : country->getCityList()) {
-      M_countryCityList[city->getCityName()] = country->getPngPath();
-    }
-  }
-}
+//   for (const Country *country : m_countryList) {
+//     M_countryCityList[country->getCountry()] = country->getPngPath();
+//     for (City *city : country->getCityList()) {
+//       M_countryCityList[city->getCityName()] = country->getPngPath();
+//     }
+//   }
+// }
 
-void CountryManager::displayList() {
-  for (const auto &i : M_countryCityList.keys()) {
+// void CountryManager::displayList() {
+//   for (const auto &i : M_countryCityList.keys()) {
 
-    qDebug() << "Name is : " << i;
-  }
-}
+//     qDebug() << "Name is : " << i;
+//   }
+// }
 
 void CountryManager::addCountry(QString newCountryName, int newcountryIp,
                                 QString newImgPage) {
@@ -60,48 +60,6 @@ Country *CountryManager::getCountry(int index) {
   return m_countryList.values().at(index);
 }
 
-// void CountryManager::countryInitializer() {
-//   addCountry("India", 91, "qrc:/Png/india.png");
-//   addCountry("United States", 1, "qrc:/Png/united-states.png");
-//   addCountry("United Kingdom", 44, "qrc:/Png/united-kingdom.png");
-//   addCountry("Canada", 11, "qrc:/Png/canada.png");
-//   addCountry("Australia", 61, "qrc:/Png/australia.png");
-//   addCountry("Germany", 49, "qrc:/Png/germany.png");
-//   addCountry("France", 33, "qrc:/Png/france.png");
-//   addCountry("Japan", 81, "qrc:/Png/japan.png");
-//   addCountry("China", 86, "qrc:/Png/china.png");
-//   addCountry("Brazil", 55, "qrc:/Png/brazil.png");
-//   addCountry("Russia", 7, "qrc:/Png/russia.png");
-//   addCountry("Italy", 39, "qrc:/Png/italy.png");
-//   addCountry("Spain", 34, "qrc:/Png/spain.png");
-//   addCountry("South Korea", 82, "qrc:/Png/south-korea.png");
-//   addCountry("Mexico", 52, "qrc:/Png/mexico.png");
-//   addCountry("Singapore", 65, "qrc:/Png/singapore.png");
-//   addCountry("Netherlands", 31, "qrc:/Png/netherlands.png");
-//   addCountry("Sweden", 46, "qrc:/Png/sweden.png");
-//   addCountry("Norway", 47, "qrc:/Png/norway.png");
-//   addCountry("South Africa", 27, "qrc:/Png/south-africa.png");
-//   Country *country = m_countryList.value(91);
-//   country->addCity("Bengalore", 191);
-//   country->addCity("Mumbai", 291);
-//   country = m_countryList.value(44);
-//   country->addCity("Bengalore", 11);
-//   country->addCity("Mumbai", 12);
-
-//   int seqNum = 100;
-//   for (Country *c : m_countryList.values()) {
-//     c->setRandomNumber(seqNum);
-//     QList<City *> cities = c->getCityList();
-//     for (int i = 0; i < cities.size(); ++i) {
-//       if (i == 0) {
-//         cities[i]->setRandomNumber(seqNum);
-//       } else {
-//         cities[i]->setRandomNumber(++seqNum);
-//       }
-//     }
-//     seqNum++;
-//   }
-// }
 void CountryManager::countryInitializer()
 {
     addCountry("India", 91, "qrc:/Png/india.png");
@@ -245,9 +203,9 @@ void CountryManager::countryInitializer()
       }
 }
 
-QString CountryManager::getCountryCityList(int index) const {
-  return M_countryCityList.values().at(index);
-}
+// QString CountryManager::getCountryCityList(int index) const {
+//   return M_countryCityList.values().at(index);
+// }
 
 CountryManager::~CountryManager() {
   for (auto countryList : m_countryList) {

@@ -32,7 +32,7 @@ Rectangle {
 
     Text {
         anchors.right: parent.right
-        anchors.rightMargin: 20
+        anchors.rightMargin: 27
         anchors.verticalCenter: parent.verticalCenter
         color: "#9CA3AF"
         text: modelData.randomNumber + " ms"

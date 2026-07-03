@@ -11,7 +11,6 @@ public:
         COUNTRY_IP,
         IMAGE_PNG,
         CITIES_ROLE,
-        SEARCH_ROLE,
         RANDOM_ROLE
     };
     explicit CountryManagerViewModuel(QAbstractItemModel *parent = nullptr);

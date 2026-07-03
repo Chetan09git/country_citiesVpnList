@@ -15,7 +15,7 @@ public:
     ~CountryManager()override;
 
     QMap<int, Country *> getCountryList() const;
-    const QMap<QString, QString> &getCountryCityListMap() const;
+    // const QMap<QString, QString> &getCountryCityListMap() const;
     void addToSearchList();
     void displayList();
 
@@ -36,7 +36,7 @@ private:
     Country *m_Country;
     FileReader *m_fileReder;
     QMap<int,Country*> m_countryList;
-    QMap<QString,QString> M_countryCityList;
+    // QMap<QString,QString> M_countryCityList;
 };
 
 #endif // COUNTRYMANAGER_H

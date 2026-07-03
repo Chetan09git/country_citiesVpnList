@@ -36,13 +36,6 @@ QVariant CountryManagerViewModuel::data(const QModelIndex &index, int role) cons
         }
         return cityList;
     }
-    case SEARCH_ROLE: {
-        QString searchString = country->getCountry();
-        for (const City *city : country->getCityList()) {
-            searchString += " " + city->getCityName();
-        }
-        return searchString;
-    }
     }
     return QVariant();
 }
@@ -54,7 +47,6 @@ QHash<int, QByteArray> CountryManagerViewModuel::roleNames() const
     roles[COUNTRY_IP] = "CountryIp";
     roles[IMAGE_PNG] = "CountryImage";
     roles[CITIES_ROLE] = "cities";
-    roles[SEARCH_ROLE] = "Search";
     roles[RANDOM_ROLE] = "RandomNumber";
     return roles;
 }
@@ -67,7 +59,8 @@ QVariantList CountryManagerViewModuel::getSearchResults(const QString &filter) c
     }
 
     for (Country *country : m_countryManager->getCountryList()) {
-        if (country->getCountry().contains(filter, Qt::CaseInsensitive)) {
+        if (country->getCountry().contains(filter, Qt::CaseInsensitive))
+        {
             QVariantMap item;
             item["name"] = country->getCountry();
             item["image"] = country->getPngPath();

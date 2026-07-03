@@ -29,7 +29,6 @@ Column {
                 width: 18
                 height: 1
             }
-
             CustomImage {
                 id: downButton
                 imageSource: "qrc:/Png/downArrow.png"
@@ -45,7 +44,6 @@ Column {
                     onClicked: root.expanded = !root.expanded
                 }
             }
-
             CustomImage {
                 source: CountryImage
                 Layout.preferredWidth: 20
@@ -76,15 +74,9 @@ Column {
             font.pixelSize: 14
             color: "#9CA3AF"
             anchors.right: parent.right
-            anchors.rightMargin: 20
+            anchors.rightMargin: 27
             anchors.verticalCenter: parent.verticalCenter
         }
-
-        // MouseArea {
-        //     anchors.fill: parent
-        //     enabled: cities.length > 0
-        //     onClicked: root.expanded = !root.expanded
-        // }
     }
     CitiesListViewComponent{
 

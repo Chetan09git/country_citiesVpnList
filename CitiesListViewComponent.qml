@@ -13,7 +13,7 @@ ListView {
         color: "#28223C"
 
         BorderComponent{
-            width: parent.width * 0.8
+            width: parent.width * 0.85
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
@@ -31,7 +31,7 @@ ListView {
         Text {
             font.pixelSize: 14
             anchors.right: parent.right
-            anchors.rightMargin: 20
+            anchors.rightMargin: 27
             anchors.verticalCenter: parent.verticalCenter
             color: "#9CA3AF"
             text: modelData.randomNumber + " ms"
