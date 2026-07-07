@@ -1,15 +1,15 @@
 #ifndef JSONFILEMANAGER_H
 #define JSONFILEMANAGER_H
 
-#include "FileReader.h"
+#include "FileManager.h"
 #include <QObject>
 
 // class CountryManager;
 
-class JsonFileManager : public FileReader {
+class JsonFileManager : public FileManager {
 public:
-  bool writeJson(const QString &fileName, CountryManager *manager);
-  bool readJson(const QString &fileName, CountryManager *manager);
+  bool writeDta(const QString &fileName, CountryManager *manager);
+  bool readData(const QString &fileName, CountryManager *manager);
 };
 
 #endif

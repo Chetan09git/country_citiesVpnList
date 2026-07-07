@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
     SortFilterModuel filterModel;
     filterModel.setSourceModel(&countryModel);
 
-
     engine.rootContext()->setContextProperty("countryModel", &filterModel);
 
     const QUrl url(QStringLiteral("qrc:/main.qml"));

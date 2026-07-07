@@ -5,13 +5,12 @@
 #include <QList>
 #include "City.h"
 
-class Country : public QObject
+class Country
 {
-    Q_OBJECT
 public:
-    explicit Country(QString newCountryName, int newCountryIp, QObject *parent = nullptr);
-    explicit Country(QString newCountryName, int newCountryIp, QString path,QObject *parent = nullptr);
-    ~Country() override;
+    explicit Country(QString newCountryName, int newCountryIp);
+    explicit Country(QString newCountryName, int newCountryIp, QString path);
+    ~Country();
 
 
     void setCountry(const QString &newCountry);
@@ -27,8 +26,8 @@ public:
     QString getPngPath() const;
     void setPngPath(const QString &newPngPath);
 
-    int getRandomNumber() const;
-    void setRandomNumber(int newRandomNumber);
+    int getPingNumber() const;
+    void setPingNumber(int newRandomNumber);
 
 private:
     QString m_country;

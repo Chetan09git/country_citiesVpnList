@@ -2,8 +2,7 @@
 #include "City.h"
 #include <QRandomGenerator>
 
-Country::Country(QString newCountryName,int newCountryIp, QObject *parent)
-    : QObject{parent}
+Country::Country(QString newCountryName,int newCountryIp)
 {
 
     m_country = newCountryName;
@@ -11,7 +10,7 @@ Country::Country(QString newCountryName,int newCountryIp, QObject *parent)
     m_randomNumber = QRandomGenerator::global()->bounded(100, 199);
 }
 
-Country::Country(QString newCountryName, int newCountryIp, QString path, QObject *parent) : QObject{parent}
+Country::Country(QString newCountryName, int newCountryIp, QString path)
 
 {
     m_country = newCountryName;
@@ -74,12 +73,12 @@ void Country::setCountry(const QString &newCountry)
     m_country = newCountry;
 }
 
-int Country::getRandomNumber() const
+int Country::getPingNumber() const
 {
     return m_randomNumber;
 }
 
-void Country::setRandomNumber(int newRandomNumber)
+void Country::setPingNumber(int newRandomNumber)
 {
     m_randomNumber = newRandomNumber;
 }

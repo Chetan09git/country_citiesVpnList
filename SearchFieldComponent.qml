@@ -11,14 +11,13 @@ TextField {
         radius: 15
         color: "#322D45"
 
-        Image {
+        CustomImage{
             width: parent.width * 0.04
             height: width
-            opacity: 1000000000
+            opacity: 1
             anchors.left: parent.left
             anchors.leftMargin: 10
             anchors.verticalCenter: parent.verticalCenter
-            // source: "qrc:/Png/icons8-search-50.png"
             source: "qrc:/Png/search.png"
 
         }

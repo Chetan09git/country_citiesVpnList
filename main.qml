@@ -13,7 +13,6 @@ ApplicationWindow {
     // ListviewHeaderComponent{
 
     // }
-
     CountryViewPage{
         anchors.fill: parent
     }

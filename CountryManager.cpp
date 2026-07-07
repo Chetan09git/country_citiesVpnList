@@ -10,9 +10,8 @@ CountryManager::CountryManager(QObject *parent) : QObject{parent} {
   if(!m_fileReder)
       m_fileReder = new JsonFileManager;
 
-  // m_fileReder->writeJson("CountryData.json", this);
-  m_fileReder->readJson("CountryData.json",this);
-  // addToSearchList();
+  // m_fileReder->writeData("CountryData.json", this);
+  m_fileReder->readData("CountryData.json",this);
 }
 
 QMap<int, Country *> CountryManager::getCountryList() const {
@@ -46,6 +45,25 @@ void CountryManager::addCountry(QString newCountryName, int newcountryIp,
   m_countryList.insert(newcountryIp, m_Country);
   emit countryAdded(newCountryName);
 }
+
+// void CountryManager::setCountryCityList()
+// {
+//     // for (Country *country: m_countryList)
+//     // {
+//     //     QVariantMap countryItem;
+//     //     countryItem["name"] = country->getCountry();
+//     //     countryItem["image"] = country->getPngPath();
+//     //     countryItem["randomNumber"] = country->getRandomNumber();
+//     //     m_searchList.append(countryItem);
+
+//     // }
+// }
+
+// QVariantList CountryManager::getCountryCityList()
+// {
+//     return QVariantList();
+// }
+
 
 CountryManager *CountryManager::init() {
   if (m_countryManager == nullptr) {
@@ -190,13 +208,13 @@ void CountryManager::countryInitializer()
 
       int seqNum = 100;
       for (Country *c : m_countryList.values()) {
-        c->setRandomNumber(seqNum);
+        c->setPingNumber(seqNum);
         QList<City *> cities = c->getCityList();
         for (int i = 0; i < cities.size(); ++i) {
           if (i == 0) {
-            cities[i]->setRandomNumber(seqNum);
+            cities[i]->setPingNumber(seqNum);
           } else {
-            cities[i]->setRandomNumber(++seqNum);
+            cities[i]->setPingNumber(++seqNum);
           }
         }
         seqNum++;

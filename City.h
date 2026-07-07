@@ -15,8 +15,8 @@ public:
 
     void setCityName(const QString &newCityName);
 
-    int getRandomNumber() const;
-    void setRandomNumber(int newRandomNumber);
+    int getPingNumber() const;
+    void setPingNumber(int newRandomNumber);
 
 private:
     QString m_cityName;

@@ -10,7 +10,7 @@
 
 #include <QDir>
 
-bool JsonFileManager::writeJson(const QString &fileName,
+bool JsonFileManager::writeDta(const QString &fileName,
                                 CountryManager *manager)
 {
     QJsonArray countryArray;
@@ -76,7 +76,7 @@ bool JsonFileManager::writeJson(const QString &fileName,
 }
 
 
-bool JsonFileManager::readJson(const QString &fileName,
+bool JsonFileManager::readData(const QString &fileName,
                                CountryManager *manager)
 {
     QFile file(fileName);

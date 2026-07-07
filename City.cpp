@@ -15,8 +15,8 @@ void City::setPinCode(int newPinCode) { m_pinCode = newPinCode; }
 
 void City::setCityName(const QString &newCityName) { m_cityName = newCityName; }
 
-int City::getRandomNumber() const { return m_randomNumber; }
+int City::getPingNumber() const { return m_randomNumber; }
 
-void City::setRandomNumber(int newRandomNumber) {
+void City::setPingNumber(int newRandomNumber) {
   m_randomNumber = newRandomNumber;
 }

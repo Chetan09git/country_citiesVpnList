@@ -18,7 +18,7 @@ void SortFilterModuel::setSortType(int index)
     switch(index)
     {
     case 0:
-        setSortRole(5);sort(0, Qt::AscendingOrder);break;
+        setSortRole(0);sort(0, Qt::AscendingOrder);break;
     case 1:
         setSortRole(1);sort(0, Qt::AscendingOrder);break;
     case 2:

@@ -4,15 +4,15 @@
 #include "Country.h"
 #include <QObject>
 #include <QMap>
-#include "FileReader.h"
+#include "FileManager.h"
 
 class CountryManager : public QObject
 {
     Q_OBJECT
     explicit CountryManager(QObject *parent = nullptr);
+    ~CountryManager()override;
 public:
 
-    ~CountryManager()override;
 
     QMap<int, Country *> getCountryList() const;
     // const QMap<QString, QString> &getCountryCityListMap() const;
@@ -24,6 +24,8 @@ public:
 
     void addCountry(QString newCountryName, int newcountryIp, QString newImgPage);
     QString getCountryCityList(int index) const;
+    // QVariantList getCountryCityList();
+    // void setCountryCityList();
 
 signals:
     void countryAdded(const QString &newCountryName);
@@ -34,7 +36,8 @@ private:
 
     void countryInitializer();
     Country *m_Country;
-    FileReader *m_fileReder;
+    FileManager *m_fileReder;
+    // QVariantList m_searchList;
     QMap<int,Country*> m_countryList;
     // QMap<QString,QString> M_countryCityList;
 };

@@ -9,7 +9,7 @@ ListView {
         width: ListView.view.width
         height: 40
         headerTitle: rootListView.model === countryModel ? "All location" : "Search results"
-        comboBoxIsEnable: rootListView.model === countryModel
+        comboBoxIsEnable: true
         models: ["Fastest","A-Z","Z-A"]
     }
 

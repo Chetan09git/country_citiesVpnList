@@ -1,5 +1,4 @@
 #include "CountryManagerViewModuel.h"
-#include "JsonFileManager.h"
 
 CountryManagerViewModuel::CountryManagerViewModuel(QAbstractItemModel *parent):QAbstractListModel(parent)
 {
@@ -25,13 +24,13 @@ QVariant CountryManagerViewModuel::data(const QModelIndex &index, int role) cons
     case IMAGE_PNG:
         return country->getPngPath();break;
     case RANDOM_ROLE:
-        return country->getRandomNumber();break;
+        return country->getPingNumber();break;
     case CITIES_ROLE: {
         QVariantList cityList;
         for (const City *city : country->getCityList()) {
             QVariantMap map;
             map["name"] = city->getCityName();
-            map["randomNumber"] = city->getRandomNumber();
+            map["randomNumber"] = city->getPingNumber();
             cityList.append(map);
         }
         return cityList;
@@ -64,7 +63,7 @@ QVariantList CountryManagerViewModuel::getSearchResults(const QString &filter) c
             QVariantMap item;
             item["name"] = country->getCountry();
             item["image"] = country->getPngPath();
-            item["randomNumber"] = country->getRandomNumber();
+            item["randomNumber"] = country->getPingNumber();
             results.append(item);
         }
         for (City *city : country->getCityList()) {
@@ -72,7 +71,7 @@ QVariantList CountryManagerViewModuel::getSearchResults(const QString &filter) c
                 QVariantMap item;
                 item["name"] = city->getCityName();
                 item["image"] = country->getPngPath();
-                item["randomNumber"] = city->getRandomNumber();
+                item["randomNumber"] = city->getPingNumber();
                 results.append(item);
             }
         }

@@ -22,12 +22,22 @@ Item {
     ComboBox {
         id:comboBox
         anchors.right: parent.right
-        anchors.rightMargin: 30
         anchors.verticalCenter: parent.verticalCenter
         visible: comboBoxIsEnable
-        contentItem: Text{text: comboBox.displayText;color: "#1e90ff"}
+
+        contentItem:Text {
+            text: comboBox.displayText
+            color: "#1e90ff"
+            anchors.fill: parent
+            anchors.rightMargin: parent.width * 0.3
+            horizontalAlignment: Text.AlignRight
+            verticalAlignment: Text.AlignVCenter
+        }
         onCurrentIndexChanged: {
             countryModel.setSortType(currentIndex)
+        }
+        background: Rectangle{
+            color: "Transparent"
         }
 
     }
