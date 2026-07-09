@@ -8,7 +8,6 @@ class CountryManager;
 class FileManager {
 public:
   virtual ~FileManager() {};
-
   virtual bool writeDta(const QString &fileName, CountryManager *manager) = 0;
   virtual bool readData(const QString &fileName, CountryManager *manager) = 0;
 };

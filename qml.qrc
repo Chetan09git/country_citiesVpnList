@@ -40,5 +40,6 @@
         <file>Png/search.png</file>
         <file>Png/left.png</file>
         <file>Png/downArrow.png</file>
+        <file>Png/up-down.png</file>
     </qresource>
 </RCC>

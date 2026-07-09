@@ -24,12 +24,11 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
 HEADERS += \
     City.h \
     Country.h \
     CountryManager.h \
     CountryManagerViewModuel.h \
-    FileReader.h \
+    FileManager.h \
     JsonFileManager.h \
     SortFilterModuel.h

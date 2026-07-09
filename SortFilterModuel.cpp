@@ -5,7 +5,6 @@ SortFilterModuel::SortFilterModuel(QSortFilterProxyModel *parent) :QSortFilterPr
     setFilterRole(5);
     setSortRole(1);
     setFilterCaseSensitivity(Qt::CaseInsensitive);
-    // sort(0, Qt::AscendingOrder);
 }
 
 void SortFilterModuel::setFilterString(const QString &filter)

@@ -90,7 +90,7 @@ bool JsonFileManager::readData(const QString &fileName,
             .object()["countries"]
             .toArray();
 
-    for (const auto &countryVal :  countries)
+    for (const auto &countryVal : std::as_const( countries))
     {
         auto countryObj = countryVal.toObject();
 
