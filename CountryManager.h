@@ -15,7 +15,7 @@ public:
 
 
     QMap<int, Country *> getCountryList() const;
-    void addToSearchList();
+    // void addToSearchList();
     void displayList();
 
     static CountryManager *init();
@@ -23,6 +23,7 @@ public:
 
     void addCountry(QString newCountryName, int newcountryIp, QString newImgPage);
     QString getCountryCityList(int index) const;
+
 
 signals:
     void countryAdded(const QString &newCountryName);

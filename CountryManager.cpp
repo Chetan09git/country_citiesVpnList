@@ -10,8 +10,8 @@ CountryManager::CountryManager(QObject *parent) : QObject{parent} {
   if(!m_fileReder)
       m_fileReder = new JsonFileManager;
 
+  // m_fileReder->writeDta("CountryData.json", this);
   m_fileReder->readData("CountryData.json",this);
-  m_fileReder->writeDta("CountryData.json", this);
 }
 
 QMap<int, Country *> CountryManager::getCountryList() const {
@@ -65,8 +65,15 @@ void CountryManager::countryInitializer()
 
     country = m_countryList.value(44);
     country->addCity("London", 441);
-    country->addCity("Manchester", 442);
-    country->addCity("Birmingham", 443);
+    country->addCity("Birmingham", 442);
+    country->addCity("Manchester", 443);
+    country->addCity("Liverpool", 444);
+    country->addCity("Leeds", 445);
+    country->addCity("Glasgow", 446);
+    country->addCity("Edinburgh", 447);
+    country->addCity("Bristol", 448);
+    country->addCity("Cardiff", 449);
+    country->addCity("Belfast", 450);
 
     country = m_countryList.value(11);
     country->addCity("Toronto", 111);
@@ -148,6 +155,18 @@ void CountryManager::countryInitializer()
     country->addCity("Johannesburg", 271);
     country->addCity("Cape Town", 272);
     country->addCity("Durban", 273);
+
+    country = m_countryList.value(1);
+    country->addCity("New York", 101);
+    country->addCity("Los Angeles", 102);
+    country->addCity("Chicago", 103);
+    country->addCity("Houston", 104);
+    country->addCity("Phoenix", 105);
+    country->addCity("Philadelphia", 106);
+    country->addCity("San Antonio", 107);
+    country->addCity("San Diego", 108);
+    country->addCity("Dallas", 109);
+    country->addCity("San Jose", 110);
 
       int seqNum = 100;
       for (Country *c : m_countryList.values()) {

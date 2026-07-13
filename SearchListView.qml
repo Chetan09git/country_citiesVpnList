@@ -16,8 +16,8 @@ Rectangle {
         spacing: 12
 
         CustomImage {
-            width: 32
-            height: 24
+            width: 18
+            height: 18
             anchors.verticalCenter: parent.verticalCenter
             source: modelData.image
         }
